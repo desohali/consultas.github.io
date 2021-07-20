@@ -12,9 +12,10 @@
 	<title>CONSULTAS MSB</title>
 </head>
 <style>
-    *:not(i){
-		text-transform: capitalize!important;
+	*:not(i) {
+		text-transform: capitalize !important;
 	}
+
 	:root {
 		--bg-system: #44c4b7;
 		--bg-title: rgb(171, 180, 15);
@@ -78,7 +79,7 @@
 							<div class="w-100 h-100 d-table">
 								<div style="display: table-cell; vertical-align: middle;">
 									<p class="text-center text-primary fw-bold align-middle m-0 p-1">
-										CONSULTAS DE TRÁMITE
+										consultas de trámite
 									</p>
 								</div>
 							</div>
@@ -89,7 +90,7 @@
 
 				<div id="alertaWeb" class="alert alert-info mb-0 fw-bold" role="alert">
 					<i class="material-icons float-start pe-2">description</i>
-					CONSULTAS DE TRÁMITE
+					consultas de trámite
 				</div>
 			</div>
 		</div>
@@ -99,30 +100,31 @@
 				<fieldset class="w-100  border border-title rounded">
 					<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
 						<span class="badge bg-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
-							BUSQUEDA POR AÑO Y NÚMERO DE TRÁMITE O EXPEDIENTE
+							<!-- BUSQUEDA POR AÑO Y NÚMERO DE TRÁMITE O EXPEDIENTE -->
+							busqueda por año y número de trámite o expediente
 						</span>
 					</legend>
 					<div class="w-100 px-3">
 						<div class="row">
 							<div class="col-12 col-md-6 col-lg-3">
 								<div class="input-group mb-2">
-									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">TIPO DOCUMENTO</span>
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">tipo documento</span>
 									<select name="" id="" class="form-control text-secondary fw-bold">
-										<option value="">EXPEDIENTE</option>
-										<option value="">CORRESPONDENCIA</option>
-										<option value="">TRÁMITE</option>
+										<option value="">expediente</option>
+										<option value="">correspondencia</option>
+										<option value="">trámite</option>
 									</select>
 								</div>
 							</div>
 							<div class="col-12 col-md-6 col-lg-3">
 								<div class="input-group mb-2">
-									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">AÑO DOCUMENTO</span>
-									<input type="number" min="1900" max="2099" sleep="1" value="2021" class="form-control text-secondary fw-bold" aria-describedby="basic-addon1">
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">año documento</span>
+									<input type="number" min="1900" max="2099" sleep="1" value="<?= date('Y') ?>" class="form-control text-secondary fw-bold" aria-describedby="basic-addon1">
 								</div>
 							</div>
 							<div class="col-12 col-md-6 col-lg-3">
 								<div class="input-group mb-2">
-									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">Nº DOCUMENTO</span>
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">nº documento</span>
 									<input type="number" class="form-control text-secondary fw-bold" aria-describedby="basic-addon1">
 								</div>
 							</div>
@@ -130,7 +132,7 @@
 								<div class="btn-group w-100 mb-2" role="group" aria-label="Basic example">
 									<button type="button" class="btn btn-outline-info fw-bold">
 										<i class="material-icons float-start pe-2">search</i>
-										CONSULTAR
+										consultar
 									</button>
 								</div>
 							</div>
@@ -148,27 +150,27 @@
 						<div class="row fw-bold">
 							<div class="col-12 col-lg-2">
 								<h6 class="mb-0 fw-bold text-dark">
-									PLAZO SOLICITUD :
+									plazo solicitud :
 								</h6>
 							</div>
 							<div class="col-12 col-lg-2">
 								<h6 class="mb-0 fw-bold text-dark">
-									FECHA INGRESO :
+									fecha ingreso :
 								</h6>
 							</div>
 							<div class="col-12 col-lg-2">
 								<h6 class="mb-0 fw-bold text-dark">
-									ÁREA DE ENTREGA :
+									área de entrega :
 								</h6>
 							</div>
 							<div class="col-12 col-lg-4">
 								<h6 class="mb-0 fw-bold text-dark">
-									RECOJER O SER NOTIFICADO DESDE :
+									recojer o ser notificado desde :
 								</h6>
 							</div>
 							<div class="col-12 col-lg-2">
 								<h6 class="mb-0 fw-bold text-dark">
-									ESTADO :
+									estado :
 								</h6>
 							</div>
 						</div>
@@ -179,7 +181,8 @@
 					<fieldset class="w-100  border border-title rounded">
 						<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
 							<span class="badge text-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
-								CONSULTA DE TRÁMITES Ó DOCUMENTOS
+								<!-- CONSULTA DE TRÁMITES Ó DOCUMENTOS -->
+								consulta de trámites o documentos
 							</span>
 						</legend>
 						<div class="w-100 px-3">
@@ -187,10 +190,10 @@
 								<table class="table table-less">
 									<thead class=" -secondary" style="background: #e9ecef;">
 										<tr>
-											<th scope="col">EMITE</th>
-											<th scope="col">RECIBE</th>
-											<th scope="col">ÁREA DESTINO</th>
-											<th scope="col">ACCIÓN</th>
+											<th scope="col">emite</th>
+											<th scope="col">recibe</th>
+											<th scope="col">área destino</th>
+											<th scope="col">acción</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -212,7 +215,8 @@
 							<div class="d-grid gap-2">
 								<button class="btn btn-outline-info fw-bold" type="button">
 									<i class="material-icons float-start pe-2">description</i>
-									DOCUMENTOS AL ADMINISTRADO
+									<!-- DOCUMENTOS AL ADMINISTRADO -->
+									documentos al administrado
 								</button>
 							</div>
 						</div>
@@ -220,7 +224,8 @@
 							<div class="d-grid gap-2">
 								<button class="btn btn-outline-info fw-bold" type="button">
 									<i class="material-icons float-start pe-2">download</i>
-									DESCARGAR DOCUMENTO
+									<!-- DESCARGAR DOCUMENTO -->
+									descargar documento
 								</button>
 							</div>
 						</div>
@@ -228,7 +233,7 @@
 					<fieldset class="w-100  border border-title rounded">
 						<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
 							<span class="badge text-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
-								ADMINISTRADO
+								administrado
 							</span>
 						</legend>
 						<div class="w-100 px-3">
@@ -236,13 +241,13 @@
 								<table class="table table-less">
 									<thead class=" -secondary" style="background: #e9ecef;">
 										<tr>
-											<th scope="col">FECHA</th>
-											<th scope="col">Nº DOCUMENTO</th>
-											<th scope="col">RESUELVE</th>
-											<th scope="col">RECEPCIÓN TRÁMITE</th>
-											<th scope="col">NOTIFICACIÓN</th>
-											<th scope="col">PERSONA NOTIFICADA</th>
-											<th scope="col">RESULTADO</th>
+											<th scope="col">fecha</th>
+											<th scope="col">nº documento</th>
+											<th scope="col">resuelve</th>
+											<th scope="col">recepción trámite</th>
+											<th scope="col">notificación</th>
+											<th scope="col">persona notificada</th>
+											<th scope="col">resultado</th>
 										</tr>
 									</thead>
 									<tbody>
