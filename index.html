@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<title>CONSULTAS MSB</title>
+</head>
+<style>
+	:root {
+		--bg-system: #44c4b7;
+		--bg-title: rgb(171, 180, 15);
+		/*#44c4b7;*/
+	}
+
+	.bg-title {
+		background-color: var(--bg-title) !important;
+
+	}
+
+	.text-title {
+		color: var(--bg-title) !important;
+	}
+
+	.border-title {
+		border-color: var(--bg-title) !important;
+	}
+
+	.bg-primary {
+		background-color: var(--bg-system) !important;
+	}
+
+	.border-primary {
+		border-color: var(--bg-system) !important;
+	}
+
+	.text-primary {
+		color: var(--bg-system) !important;
+	}
+
+	.btn-outline-info {
+		color: var(--bg-system) !important;
+		border-color: var(--bg-system) !important;
+	}
+
+	.btn-outline-info:hover {
+		color: white !important;
+		background-color: var(--bg-system) !important;
+		border-color: var(--bg-system) !important;
+	}
+
+	@media (max-width: 426px) {
+		*:not(i) {
+			font-size: 0.975em !important;
+		}
+	}
+</style>
+
+<body>
+	<div class="container-fluid">
+
+		<div class="row mt-3">
+			<div class="col-12">
+				<div id="alertaMovil" class="w-100 text-center">
+					<div class="row">
+						<div class="col-4">
+							<img id="logoMovil" src="" alt="" width="100%" height="100%">
+						</div>
+						<div class="col-8">
+							<div class="w-100 h-100 d-table">
+								<div style="display: table-cell; vertical-align: middle;">
+									<p class="text-center text-primary fw-bold align-middle m-0 p-1">
+										CONSULTAS DE TRÁMITE
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="alertaWeb" class="alert alert-info mb-0 fw-bold" role="alert">
+					<i class="material-icons float-start pe-2">description</i>
+					CONSULTAS DE TRÁMITE
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-3">
+			<div class="col-12">
+				<fieldset class="w-100  border border-title rounded">
+					<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
+						<span class="badge bg-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
+							BUSQUEDA POR AÑO Y NÚMERO DE TRÁMITE O EXPEDIENTE
+						</span>
+					</legend>
+					<div class="w-100 px-3">
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="input-group mb-2">
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">TIPO DOCUMENTO</span>
+									<select name="" id="" class="form-control text-secondary fw-bold">
+										<option value="">EXPEDIENTE</option>
+										<option value="">CORRESPONDENCIA</option>
+										<option value="">TRÁMITE</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="input-group mb-2">
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">AÑO DOCUMENTO</span>
+									<input type="number" min="1900" max="2099" sleep="1" value="2021" class="form-control text-secondary fw-bold" aria-describedby="basic-addon1">
+								</div>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="input-group mb-2">
+									<span class="input-group-text text-secondary fw-bold" id="basic-addon1">Nº DOCUMENTO</span>
+									<input type="number" class="form-control text-secondary fw-bold" aria-describedby="basic-addon1">
+								</div>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="btn-group w-100 mb-2" role="group" aria-label="Basic example">
+									<button type="button" class="btn btn-outline-info fw-bold">
+										<i class="material-icons float-start pe-2">search</i>
+										CONSULTAR
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+
+		<!--  -->
+		<div class="w-100 border border-title rounded mt-3">
+			<div class="row">
+				<div class="col-12">
+					<div class="w-100 border border-title px-3 py-2 rounded">
+						<div class="row fw-bold">
+							<div class="col-12 col-lg-2">
+								<h6 class="mb-0 fw-bold text-dark">
+									PLAZO SOLICITUD :
+								</h6>
+							</div>
+							<div class="col-12 col-lg-2">
+								<h6 class="mb-0 fw-bold text-dark">
+									FECHA INGRESO :
+								</h6>
+							</div>
+							<div class="col-12 col-lg-2">
+								<h6 class="mb-0 fw-bold text-dark">
+									ÁREA DE ENTREGA :
+								</h6>
+							</div>
+							<div class="col-12 col-lg-4">
+								<h6 class="mb-0 fw-bold text-dark">
+									RECOJER O SER NOTIFICADO DESDE :
+								</h6>
+							</div>
+							<div class="col-12 col-lg-2">
+								<h6 class="mb-0 fw-bold text-dark">
+									ESTADO :
+								</h6>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-12 col-lg-6">
+					<fieldset class="w-100  border border-title rounded">
+						<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
+							<span class="badge text-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
+								CONSULTA DE TRÁMITES Ó DOCUMENTOS
+							</span>
+						</legend>
+						<div class="w-100 px-3">
+							<div class="table-responsive">
+								<table class="table table-less">
+									<thead class=" -secondary" style="background: #e9ecef;">
+										<tr>
+											<th scope="col">EMITE</th>
+											<th scope="col">RECIBE</th>
+											<th scope="col">ÁREA DESTINO</th>
+											<th scope="col">ACCIÓN</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="row d-none">
+						<div class="col-12 col-lg-6">
+							<div class="d-grid gap-2">
+								<button class="btn btn-outline-info fw-bold" type="button">
+									<i class="material-icons float-start pe-2">description</i>
+									DOCUMENTOS AL ADMINISTRADO
+								</button>
+							</div>
+						</div>
+						<div class="col-12 col-lg-6">
+							<div class="d-grid gap-2">
+								<button class="btn btn-outline-info fw-bold" type="button">
+									<i class="material-icons float-start pe-2">download</i>
+									DESCARGAR DOCUMENTO
+								</button>
+							</div>
+						</div>
+					</div>
+					<fieldset class="w-100  border border-title rounded">
+						<legend class="font-weight-bold d-block" style="float:unset!important;width: max-content;">
+							<span class="badge text-title d-block text-truncate" style="max-width: calc(100vw - 1.6rem);max-width: -webkit-calc(100vw - 1.6rem);">
+								ADMINISTRADO
+							</span>
+						</legend>
+						<div class="w-100 px-3">
+							<div class="table-responsive">
+								<table class="table table-less">
+									<thead class=" -secondary" style="background: #e9ecef;">
+										<tr>
+											<th scope="col">FECHA</th>
+											<th scope="col">Nº DOCUMENTO</th>
+											<th scope="col">RESUELVE</th>
+											<th scope="col">RECEPCIÓN TRÁMITE</th>
+											<th scope="col">NOTIFICACIÓN</th>
+											<th scope="col">PERSONA NOTIFICADA</th>
+											<th scope="col">RESULTADO</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script>
+	window.addEventListener('DOMContentLoaded', function() {
+		const mM = window.matchMedia("(max-width: 426px)");
+		new Consultas().responsive(mM);
+		mM.onchange = (e) => {
+			new Consultas().responsive(e);
+		};
+	});
+
+	var Consultas = (function() {
+		Consultas.prototype.init = async function() {
+
+		};
+		Consultas.prototype.cacheImagen = async function() {
+			const imageBase64 = 'data:image/jpeg;base64,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';
+			fetch(imageBase64)
+				.then(async (result) => {
+					const imageBlob = await result.blob(),
+						image = new Image();
+					image.src = window.URL.createObjectURL(imageBlob);
+
+					const alertaMovil = document.getElementById('alertaMovil'),
+						logoMovil = document.getElementById('logoMovil'),
+						alertaWeb = document.getElementById('alertaWeb');
+
+					if (alertaMovil.classList.contains('d-none')) {
+						alertaMovil.classList.remove('d-none');
+					}
+					logoMovil.setAttribute('src', image.src);
+
+					if (!alertaWeb.classList.contains('d-none')) {
+						alertaWeb.classList.add('d-none');
+					}
+
+				});
+		};
+		Consultas.prototype.responsive = function(matchMedia) {
+			if (matchMedia.matches) {
+				this.cacheImagen();
+			} else {
+				document.getElementById('alertaWeb').classList.remove('d-none');
+				document.getElementById('alertaMovil').classList.add('d-none');
+			}
+		};
+	});
+</script>
+
+</html>
