@@ -271,7 +271,7 @@
 </body>
 <script>
 	window.addEventListener('DOMContentLoaded', function() {
-		const mM = window.matchMedia("(max-width: 575px)");
+		const mM = window.matchMedia("(max-width: 768px)");
 		new Consultas().responsive(mM);
 		mM.onchange = (e) => {
 			new Consultas().responsive(e);
